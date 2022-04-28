@@ -7,7 +7,6 @@ double a , b, c, d ,e ,f;
 
 int Mittelwert(){
   ifstream fin ("datensumme.txt");
-  
   for (int i = 0; i<234 ;i++){
     fin >> a;
     b +=a;
