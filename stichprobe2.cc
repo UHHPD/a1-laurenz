@@ -3,7 +3,7 @@
 #include <cmath>
 using namespace std;
 
-double a , b, c, d, e, f, g;
+double a , b, c, d, e, f, g, h, k, l;
 
 int Mittelwert(){
   ifstream fin ("datensumme.txt");
@@ -14,7 +14,6 @@ int Mittelwert(){
       b +=a;
     }
     c = b/9;
-    //cout << c << endl;
     fout << c << endl;
     b = 0;
   }
@@ -34,22 +33,31 @@ int Varianz(){
     }
     f = e/9; 
     e = 0;
-    //cout << f << endl;
     fout2 << f << endl;
     g += f;
     }
-  //cout << g/26 << endl;
   fin.close();
   fin2.close();
   fout2.close();
   }
 
-int Standartabweichung(){
-  cout << sqrt(f) << endl;
+int Mittelwerte2(){
+  ifstream fin("mittelwerte.txt");
+  ifstream fin2("varianzen.txt");
+  for(int i = 0; i<26; i++){
+    fin >> g;
+    fin2 >> k;
+    h += g;
+    l += k;
+  }
+  h /= 26;
+  l /= 26;
+  cout << h << endl;
+  cout << l << endl;
 }
 
 int main(){
 Mittelwert();
 Varianz();
-Standartabweichung();
+Mittelwerte2();
 }
