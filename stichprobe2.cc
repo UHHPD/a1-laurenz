@@ -25,7 +25,7 @@ int Mittelwert(){
 int Varianz(){
   ifstream fin ("datensumme.txt");
   ifstream fin2 ("mittelwerte.txt");
-  ofstream fout ("varienzen.txt");
+  ofstream fout ("varianzen.txt");
   for (int j = 0; j<26 ;j++){
     for (int i = 0; i<9 ;i++){
       fin >> d;
